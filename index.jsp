@@ -44,7 +44,7 @@
     <form method="get" action="index.jsp">
         <div class="row">
             <label for="name">הכנס שם:</label>
-            <input id="name" name="name" type="text" placeholder="לדוגמה: Alan" />
+            <input id="name" name="name" type="text" placeholder="Name" />
             <button type="submit">ברך אותי</button>
         </div>
     </form>
