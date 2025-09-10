@@ -53,7 +53,7 @@
            String name = request.getParameter("name");
            if (name != null && !name.trim().isEmpty()) { 
         %>
-            <p class="ok">שלום, <%= esc(name) %>! שמח שביקרת 😊</p>
+            <p class="ok">שלום, מגניב נכון <%= esc(name) %>! שמח שביקרת 😊</p>
         <% } else { %>
             <p>טרם הזנת שם. נסה למלא את התיבה וללחוץ על הכפתור.</p>
         <% } %>
