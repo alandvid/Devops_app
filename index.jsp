@@ -36,7 +36,7 @@
     }
 %>
 <header>
-    <h1>ברוכים הבאים ל‑Simple JSP</h1>
+    <h1>ברוכים הבאים ל‑DevOps project</h1>
     <p>דוגמה מינימלית עם <strong>שדה קלט</strong>, <strong>כפתור</strong> וקישור אחד — מתאימה לדרישות המטלה.</p>
 </header>
 
