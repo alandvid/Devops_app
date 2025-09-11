@@ -3,7 +3,7 @@
 <html lang="he">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome - Simple JSP</title>
+    <title>DevOps project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { font-family: Arial, sans-serif; margin: 2rem; }
