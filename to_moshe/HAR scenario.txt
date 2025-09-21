@@ -1,0 +1,1 @@
+We opened the application’s home page → verified the page loaded and key elements are visible → typed text into the input field (אלן ויניק) → clicked the submit button → waited for the response/navigation to the result page → verified the new page displays the expected text/confirmation (שלום, אלן ויניק! שמח שביקרת 😊).

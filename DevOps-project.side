@@ -1,0 +1,129 @@
+{
+  "id": "54325b58-1ce1-4014-b1b4-893cdffd3cea",
+  "version": "2.0",
+  "name": "DevOps-project",
+  "url": "http://localhost/AlanVinnik_IdoBenYaish_RoyDadon_OshritMelako_SaharAviad/",
+  "tests": [{
+    "id": "5aa19fb9-3286-4f1d-8816-6307366637d1",
+    "name": "name test1",
+    "commands": [{
+      "id": "286e247a-a834-418e-97ac-18fe4ce514cb",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/AlanVinnik_IdoBenYaish_RoyDadon_OshritMelako_SaharAviad/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fcf679b5-d2f3-41ed-9299-6a8bfcd3a3a8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x672",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26eec152-e83e-42d6-bd29-68cc179bcb6b",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fc2cbe9-16ba-41f3-8fe9-3fe5c763c87f",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Alan"
+    }, {
+      "id": "0c604e58-6ce4-4c0f-adaf-5ebda7ed800e",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'ברך אותי')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f25413d-2d1a-4ce3-903b-fe82cb8ff87e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1fa53019-4b4e-4857-abc0-86ef38966781",
+    "name": "hit-link test 3",
+    "commands": [{
+      "id": "c20b8330-13ba-49af-87c2-f83da5df4483",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/AlanVinnik_IdoBenYaish_RoyDadon_OshritMelako_SaharAviad/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bac2d2d-7227-455b-8f71-135ae3ccd6c5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x672",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f80421b-01b5-4496-a7e0-2d99c7f34a06",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=מעבר לאתר HIT",
+      "targets": [
+        ["linkText=מעבר לאתר HIT", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'מעבר לאתר HIT')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hit.ac.il')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'מעבר לאתר HIT')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5454",
+      "windowTimeout": 2000
+    }, {
+      "id": "2e2a54cb-2b02-4b76-8fd9-a7cc5449172c",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5454}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ce33e33-6a9d-43b1-a9cc-9837e86e6ad9",
+      "comment": "",
+      "command": "verify url",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "497ce62b-5302-4aa2-b9b1-1bc44ef658f3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost/AlanVinnik_IdoBenYaish_RoyDadon_OshritMelako_SaharAviad/"],
+  "plugins": []
+}

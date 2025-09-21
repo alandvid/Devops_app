@@ -1,0 +1,36 @@
+Why the curves look like this (the “knee”)
+
+As load rises, you’re bumping into a single bottleneck (classic queueing behavior). Before the knee, each extra user is handled promptly; after the knee, requests start waiting in queues, so:
+
+p95/p99 latency bends upward (queue wait dominates service time),
+
+throughput plateaus (can’t process faster than the slowest tier),
+
+KO% (failures/timeouts) appears once waits exceed client timeouts.
+
+That’s exactly  “capacity knee” you expect when λ (arrival rate) ≈ μ (service capacity).
+
+Most likely “what happened” inside your stack
+
+Given your app is a Tomcat webapp hitting a backend (from your earlier context), the usual culprits are:
+
+DB connection pool exhaustion
+
+Tomcat has plenty of request threads, but the DB pool is smaller, so threads block waiting for a connection → queues grow → timeouts → KO.
+
+Tomcat accept/backlog / worker threads
+
+maxThreads or acceptCount reached: requests pile up in the socket/backlog; once waits exceed timeouts, you see KOs.
+
+CPU/GC saturation
+
+Near peak, CPU hits 90–100% or GC pauses lengthen; service times stretch, which amplifies queues and blows up tail latency.
+
+Hot spot in code or I/O
+
+A synchronized block, unindexed query, or slow disk call becomes the choke point under high concurrency.
+
+ max limit 
+
+Max sustainable load: ~170 vus/s.
+That’s the highest steady state you can hold while errors stay ≲1% and p95 stays flat. In the stress run (“120→230 vus/s”), the knee shows up just above that; in steady runs at ~170 the metrics remain stable—hence we choose 170 as the ceiling with buffer. 

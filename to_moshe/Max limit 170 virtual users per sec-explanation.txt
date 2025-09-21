@@ -1,0 +1,16 @@
+Max limit: 170 virtual users per second (vus/s) sustained.
+
+Why 170?
+It’s the highest steady-state arrival rate where the app still met our acceptance criteria. Above ~175–180 vus/s we saw clear signs of saturation—timeouts/HTTP errors began to climb and response-time percentiles bent sharply upward—so 170 gives a safe buffer below the knee of the curve.
+
+How I found it (method):
+
+Load tool: Gatling, triggered from Jenkins (“stress_test” job).
+
+Profile: Ramp from 120 → 230 vus/s over 4 minutes (env vars in the job: START_RATE=120, PEAK_RATE=230, DURATION_MIN=4).
+
+Decision rule: “Max” = highest rate sustained ≥2 minutes with ≈0–1% error rate and stable p95 latency (no accelerating growth).
+
+Verification hold: Re-ran at a flat 170 vus/s for several minutes—kept errors low and latencies stable; above that, errors/latency breached the rule.
+
+Evidence: Multiple green Jenkins runs on Sep 17, 2025 (see the availability/test history you shared), confirming stability at the chosen ceiling.

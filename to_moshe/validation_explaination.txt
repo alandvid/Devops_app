@@ -1,0 +1,9 @@
+1. Validation of homepage loading – Verified that the main page of the application loads successfully (correct URL, elements displayed). I chose this because it ensures the system is accessible and running.
+
+
+
+2. Validation of text input box – Checked that it is possible to type text into the input field and that the value is captured/displayed. I chose this because it validates user interaction with the application.
+
+
+
+3. Validation of button click – Verified that clicking the button triggers the expected action (for example, navigating to a new page or showing a message). I chose this because it confirms the core functionality of the application works properly.
