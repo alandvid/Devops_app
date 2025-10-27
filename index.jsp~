@@ -3,7 +3,7 @@
 <html lang="he">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome - Simple JSP</title>
+    <title>DevOps project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { font-family: Arial, sans-serif; margin: 2rem; }
@@ -36,15 +36,15 @@
     }
 %>
 <header>
-    <h1>ברוכים הבאים ל‑Simple JSP</h1>
-    <p>דוגמה מינימלית עם <strong>שדה קלט</strong>, <strong>כפתור</strong> וקישור אחד — מתאימה לדרישות המטלה.</p>
+    <h1>ברוכים הבאים ל‑DevOps project!</h1>
+    <p>דוגמה מינימלית עם כאן תראה <strong>שדה קלט</strong>, <strong>כפתור</strong> וקישור אחד — מתאימה לדרישות המטלה.</p>
 </header>
 
 <div class="card">
     <form method="get" action="index.jsp">
         <div class="row">
             <label for="name">הכנס שם:</label>
-            <input id="name" name="name" type="text" placeholder="לדוגמה: Alan" />
+            <input id="name" name="name" type="text" placeholder="Name" />
             <button type="submit">ברך אותי</button>
         </div>
     </form>
